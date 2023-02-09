@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+<h2>Welcome 스프링부트</h2>
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Email</th>
+  </tr>
+  <tr th:each="user : ${users}">
+    <td th:text="${user.name}"></td>
+    <td th:text="${user.email}"></td>
+    <td><a th:href="@{/edit/{id}(id=${user.id})}">update</a></td>
+  </tr>
+
+</table>
+</body>
+</html>
